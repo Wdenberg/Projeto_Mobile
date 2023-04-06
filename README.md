@@ -1,4 +1,4 @@
-Projeto BackEnd --- Faculdade Joaquim Nabuco
+Projeto Mobile --- Faculdade Joaquim Nabuco
 
 
 # Wdenberg Ramos - MT: 01559841
@@ -7,6 +7,4 @@ Projeto BackEnd --- Faculdade Joaquim Nabuco
 # Eduardo Estevão -- MT: 01566933
 
 
-Aplicação B7Burguer 
-
-Spring Boot, MySQL, JPA
+Aplicação B7Burguer - Kotlin
