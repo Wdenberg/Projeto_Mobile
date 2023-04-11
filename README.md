@@ -95,14 +95,6 @@ password: senha do usuário existente e referente ao e-mail
 #### Respostas:
 Ok! 200
 
-Exemplo de resposta:
-```
-{ 
-
-  token: “153584135@48748$4828%5486”  
-
-} 
-```
 ### Get / Users
 Esse endpoint é responsável por retornar todos os usuários que têm no sistema
 
