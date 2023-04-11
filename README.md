@@ -35,10 +35,10 @@ informações, também como botões para enviar as informações de login.
 ```
 4. Detalhamento do produto.
 ```
-A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações detalhadas 
-sobre o produto antes de decidir a compra. Essa funcionalidade inclui uma página exclusiva para cada produto, 
-que irá exibir a imagem produto com suas descrições detalhadas e o preço do produto. Também com opção para 
-adicionar o produto a uma lista de desejos para compra posteriormente.
+A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações
+detalhadas sobre o produto antes de decidir a compra. Essa funcionalidade inclui uma página exclusiva
+para cada produto, que irá exibir a imagem produto com suas descrições detalhadas e o preço do produto.
+Também com opção para adicionar o produto a uma lista de desejos para compra posteriormente.
 ```
 5. Listagem do Produto.
 ```
@@ -46,8 +46,9 @@ Essa funcionalidade vai exibir uma lista dos produtor que estão disponíveis pa
 ```
 6. Realizar vendas do Produto.
 ```
-Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo com que o cliente
-possa efetuar a compra do mesmo, onde exibirá o valor total de todos os produtos selecionados.
+Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo
+com que o cliente possa efetuar a compra do mesmo, onde exibirá o valor total de todos os 
+produtos selecionados.
 ```
 
 
