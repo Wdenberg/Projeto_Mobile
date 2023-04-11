@@ -16,28 +16,21 @@ Sistema Loja Delivery.
 Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 
 # Requisitos funcionais
-1. Registro de Usuário (Dados pessoais na aplicação).
-```
-A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, 
-fornecendo informações básicas sobre si mesmos, endereço de e-mail, 
-e senha. A tela de cadastro vai inclui campos para inserir essas informações, 
-bem como botões para enviar as informações de registro. 
 
+1. Realizar cadastro.
 ```
-2. Realizar login.
+A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo seu nome completo, 
+endereço de e-mail e senha.
 ```
-A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, 
-por meio da autenticação de suas credenciais, 
-como Email de usuário e senha. A tela de login vai inclui campos para inserir essas informações, 
-também como botões para enviar as informações de login. 
-
+2. Registrar endereço.
 ```
-3. Detalhamento do produto.
+A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua localização residente.
 ```
-A funcionalidade de detalhamento de produto vai permite que os usuários visualizem informações detalhadas sobre o produto antes de decidir comprar. 
-Essa funcionalidade inclui uma página exclusiva para cada produto, que irá exibir a imagem produto com suas descrições detalhadas, 
-é o preço do produto. Também com opção para adicionar o produto a uma lista de desejos para compra posteriormente.
-
+3. Realizar login.
+```
+A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação de suas credenciais, 
+como Email de usuário e senha. A tela de login vai incluir campos para inserir essas informações, também como botões para enviar 
+as informações de login. 
 ```
 4. Listagem do Produto.
 ```
