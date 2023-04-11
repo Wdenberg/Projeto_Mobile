@@ -19,29 +19,37 @@ Documento de Requisitos: requisitos solicitados pelo cliente, Daivid Leal.
 
 1. Realizar cadastro.
 ```
-A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo seu nome completo, 
-endereço de e-mail e senha.
+A funcionalidade da tela de cadastro é permitir que novos usuários se registrem na aplicação, fornecendo
+seu nome completo, endereço de e-mail e senha.
 ```
 2. Registrar endereço.
 ```
-A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua localização residente.
+A funcionalidade da tela de registro é permitir que o usuário registre na aplicação informações da sua 
+localização residente.
 ```
 3. Realizar login.
 ```
-A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação de suas credenciais, 
-como Email de usuário e senha. A tela de login vai incluir campos para inserir essas informações, também como botões para enviar 
-as informações de login. 
+A funcionalidade da tela de login é permitir que um usuário acesse a aplicação, por meio da autenticação 
+de suas credenciais, como Email de usuário e senha. A tela de login vai incluir campos para inserir essas 
+informações, também como botões para enviar as informações de login. 
 ```
-4. Listagem do Produto.
+4. Detalhamento do produto.
 ```
-Essa funcionalidade vai inclui um carrinho de compras onde os clientes podem adicionar os produtos que desejam comprar
+A funcionalidade de detalhamento de produto vai permitir que os usuários visualizem informações detalhadas 
+sobre o produto antes de decidir a compra. Essa funcionalidade inclui uma página exclusiva para cada produto, 
+que irá exibir a imagem produto com suas descrições detalhadas e o preço do produto. Também com opção para 
+adicionar o produto a uma lista de desejos para compra posteriormente.
+```
+5. Listagem do Produto.
+```
+Essa funcionalidade vai exibir uma lista dos produtor que estão disponíveis para venda.
+```
+6. Realizar vendas do Produto.
+```
+Essa funcionalidade vai armazenar o produto selecionado diretamente para o carrinho fazendo com que o cliente
+possa efetuar a compra do mesmo, onde exibirá o valor total de todos os produtos selecionados.
+```
 
-```
-5. Realizar vendas do Produto.
-```
-
-
-```
 
 
 # UML do Mobile
