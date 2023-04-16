@@ -130,16 +130,10 @@ O sistema pode permitir que os usuários escolham entre diferentes métodos de p
 # UML do Mobile
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/88355939/230667826-f4cd8581-431a-4c5a-9ac7-80a43a5389a8.jpeg" 
+<img src="https://user-images.githubusercontent.com/88355939/232342470-55a5a39c-0085-437f-a4f0-69e0c8dda3b0.png" 
 width="700px"/>
 </div>
 
-# UML do BackEnd
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/88355939/230667728-da6492c6-1418-4266-b39d-3ce3fc6142f1.jpeg" 
-width="700px"/>
-</div>
 
 # LINK DO FIGMA
 <a href= "https://www.figma.com/file/6M8Pq62vm6QYPqTsYJBCmf/Ui---B7Delivery?node-id=403-14&t=oVCsS6KFDeuCEaFc-0"> 
