@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/texto1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:text="@string/b7_burger"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="36dp" />
+
+        <ImageView
+            android:id="@+id/imgBurg"
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:src="@drawable/burger" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/texto2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/o_hamburguer_mais_delicioso_da_sua_cidade"
+            android:layout_margin="36dp"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:lineHeight="36dp"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exto3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logou_pediu_chegou"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="18dp"
+            android:lineHeight="40dp"
+            android:textAlignment="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/border_ra"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCardapio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_card_pio"
+            android:textColor="@color/btntext"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/border_radius"
+            />
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
