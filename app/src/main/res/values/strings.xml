@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Burguer Delivery</string>
+
+
+    <string name="o_hamburguer_mais_delicioso_da_sua_cidade">O Hamburguer mais Delicioso da sua Cidade!</string>
+    <string name="logou_pediu_chegou">Logou -> Pediu -> Chegou</string>
+    <string name="login">Login</string>
+    <string name="ver_card_pio">Ver cardápio</string>
+    <string name="b7_burger">B7 • Burger</string>
+    <string name="j_tem_cadastro_fazer_login">Já tem cadastro? Fazer Login</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="preencha_os_campos_para_criar_o_seu_cadastro">Preencha os campos para criar o seu cadastro.</string>
+    <string name="fa_a_seu_login">Faça Seu Login</string>
+    <string name="digite_o_nome_do_burger">Digite o nome do Burger</string>
+    <string name="tradicional">Tradicional</string>
+    <string name="texas_burger">Texas Burger</string>
+    <string name="seja_bem_vindo">Seja Bem-Vindo 👋</string>
+    <string name="o_que_deseja_pra_hoje">O que deseja pra hoje?</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaDeLogin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/login_ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:padding="18dp"
+        android:src="@drawable/b7__burger" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/fa_a_seu_login"
+        android:textSize="32dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:padding="16dp"
+        android:layout_below="@+id/login_ImageView"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inpute_loginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/digite_seu_e_mail"
+        android:textColorHint="@color/iputsNameColor"
+        android:layout_below="@+id/text_view_login"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/login_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/digite_sua_senha"
+        android:textColorHint="@color/iputsNameColor"
+        android:inputType="textPassword"
+        android:layout_below="@+id/inpute_loginEmail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bntLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_Password"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/border"
+        android:text="@string/login" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_pergut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/j_tem_cadastro_fazer_login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/bntLogin"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_pergut"
+
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/border"
+        android:text="@string/cadastrar"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
