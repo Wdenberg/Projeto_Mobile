@@ -18,7 +18,7 @@ class TelaHome : AppCompatActivity() {
         val btnLoginHomer = findViewById<Button>(binding.btnLoginHome.id)
 
         btnLoginHomer.setOnClickListener{
-            val proximaPagina = Intent(this, PaginaDeCadastro::class.java)
+            val proximaPagina = Intent(this, TelaDeLogin::class.java)
 
             startActivity(proximaPagina)
         }

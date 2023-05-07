@@ -40,6 +40,12 @@ class TelaDeLogin : AppCompatActivity() {
 
             }
 
+            val bntCadastro = findViewById<Button>(binding.cadastrar.id)
+            bntCadastro.setOnClickListener{
+                val pagCadastro = Intent(this, PaginaDeCadastro::class.java)
+                startActivity(pagCadastro)
+            }
+
 
         }
     }
