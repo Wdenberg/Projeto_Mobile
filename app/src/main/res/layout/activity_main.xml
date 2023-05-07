@@ -47,14 +47,20 @@
         android:textAlignment="center"
         android:textColorHint="@color/iputsNameColor" />
 
-    <ImageView
-        android:id="@+id/banerArea"
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/sliderLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/card_color"
-        android:src="@drawable/banner"
-        android:layout_below="@+id/btnpesquisa"
-        />
+        android:layout_height="210dp"
+        app:iss_auto_cycle="true"
+        app:iss_corner_radius="5"
+        app:iss_delay="3000"
+        app:iss_period="1000"
+        app:iss_error_image="@android:color/darker_gray"
+        app:iss_placeholder="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="178dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/btnpesquisa"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recyle_view"
@@ -62,7 +68,7 @@
         android:layout_height="match_parent"
         android:padding="12dp"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/banerArea"
+        android:layout_below="@+id/sliderLayout"
         />
 
 </RelativeLayout>

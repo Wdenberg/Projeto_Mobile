@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.burguerdelivery.adapters.BurguerAdapters
 import com.example.burguerdelivery.databinding.ActivityMainBinding
 import com.example.burguerdelivery.model.BurguerChar
@@ -17,11 +19,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var charItem: ArrayList<BurguerChar>
     private var gridLayoutManager: GridLayoutManager? = null
     private var burguerAdapters: BurguerAdapters? = null
+    val imageList = arrayListOf<SlideModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        imageList.add(SlideModel(R.drawable.banner))
+        imageList.add(SlideModel(R.drawable.banner2))
+
+        val sliderLayout = findViewById<ImageSlider>(R.id.sliderLayout)
+        sliderLayout.setImageList(imageList)
 
 
         recyclerView = findViewById(binding.myRecyleView.id)

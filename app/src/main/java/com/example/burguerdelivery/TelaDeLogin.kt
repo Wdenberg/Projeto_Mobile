@@ -26,7 +26,7 @@ class TelaDeLogin : AppCompatActivity() {
             val passwor = binding.loginPassword.text.toString()
 
 
-            if (email.equals("wdenberg42") && passwor.equals("3636")){
+            if (email.equals("teste") && passwor.equals("123")){
 
                 Toast.makeText(this, "Logado Com Sucesso!" , Toast.LENGTH_LONG).show()
                 val loginValid = Intent(this@TelaDeLogin, MainActivity::class.java)
