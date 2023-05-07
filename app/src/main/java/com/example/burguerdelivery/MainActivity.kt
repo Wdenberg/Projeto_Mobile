@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var charItem: ArrayList<BurguerChar>
     private var gridLayoutManager: GridLayoutManager? = null
     private var burguerAdapters: BurguerAdapters? = null
-    val imageList = arrayListOf<SlideModel>()
+    private val imageList = arrayListOf<SlideModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         imageList.add(SlideModel(R.drawable.banner))
         imageList.add(SlideModel(R.drawable.banner2))
 
-        val sliderLayout = findViewById<ImageSlider>(R.id.sliderLayout)
+        val sliderLayout = findViewById<ImageSlider>(binding.sliderLayout.id)
         sliderLayout.setImageList(imageList)
 
 
