@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.example.burguerdelivery.databinding.ActivityTelaDeLoginBinding
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 
 class TelaDeLogin : AppCompatActivity() {
 
     private lateinit var binding: ActivityTelaDeLoginBinding
+    private lateinit var mGoogleClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

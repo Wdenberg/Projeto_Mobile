@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/seja_bem_vindo"
+        android:fontFamily="@font/arsenal"
         android:textAlignment="textStart"
         android:layout_marginTop="32dp"
         android:layout_marginLeft="16dp"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/o_que_deseja_pra_hoje"
         android:textAlignment="textStart"
+        android:fontFamily="@font/arsenal"
         android:layout_marginLeft="16dp"
         android:layout_below="@+id/titulo"
 
@@ -44,6 +46,7 @@
         android:background="@drawable/border_radius"
         android:layout_marginBottom="16dp"
         android:hint="@string/digite_o_nome_do_burger"
+        android:fontFamily="@font/arsenal"
         android:textAlignment="center"
         android:textColorHint="@color/iputsNameColor" />
 

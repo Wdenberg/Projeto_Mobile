@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.burguerdelivery.R
+import com.example.burguerdelivery.databinding.GridLayoutListItemBinding
 import com.example.burguerdelivery.model.BurguerChar
 
 class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerChar>): RecyclerView.Adapter<BurguerAdapters.ItemBurguer>(){
