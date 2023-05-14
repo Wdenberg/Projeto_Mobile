@@ -9,33 +9,40 @@
     <View
         android:id="@+id/img_Burg_Home"
         android:layout_width="match_parent"
-        android:layout_height="276dp"
-        android:layout_alignParentLeft="true"
+        android:layout_height="250dp"
+        android:background="@drawable/bg___banner"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="-25dp"
-        android:background="@drawable/bg___banner" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:id="@+id/produto"
-        android:layout_width="93dp"
-        android:layout_height="29dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="168dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        android:text="@string/produto"
+        android:layout_marginEnd="50dp"
         android:gravity="center_horizontal|top"
-        />
+        android:text="@string/produto"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_arrow_back_24" />
 
     <View
         android:id="@+id/img_golden_"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
@@ -115,7 +122,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="24dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="540dp"
         android:text="-"
@@ -127,36 +134,36 @@
         android:id="@+id/contador"
         android:layout_width="46dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="60dp"
-        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="83dp"
         android:layout_marginTop="540dp"
+        android:layout_toEndOf="@+id/btn_Menos"
+        android:background="@drawable/border_contador"
         android:text="01"
-        android:textSize="18dp"
         android:textAlignment="center"
         android:textColor="#FB9400"
-        android:background="@drawable/border_contador"
-        />
+        android:textSize="18dp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Mais"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="110dp"
-        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="139dp"
         android:layout_marginTop="540dp"
-        android:text="+"
-        android:textSize="24dp"
-        android:textColor="@color/white"
+        android:layout_toEndOf="@+id/contador"
         android:background="@drawable/border_button_mais"
-        />
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/r_25_50"
-        android:layout_width="175dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="180dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="220dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="540dp"
         android:text="R$ 25,50"
