@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalhamentoProdutoActivity">
+    tools:context=".DetalhamentoProduto">
 
     <View
         android:id="@+id/img_Burg_Home"
@@ -31,6 +31,7 @@
         android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/btn_voltar"
         android:layout_width="40dp"
         android:layout_height="30dp"
         android:layout_marginStart="15dp"
