@@ -1,6 +1,8 @@
 package com.example.burguerdelivery.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.location.GnssAntennaInfo.Listener
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +10,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.burguerdelivery.DetalhamentoProduto
+import com.example.burguerdelivery.MainActivity
 import com.example.burguerdelivery.R
 import com.example.burguerdelivery.databinding.GridLayoutListItemBinding
 import com.example.burguerdelivery.model.BurguerChar
 
 class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerChar>): RecyclerView.Adapter<BurguerAdapters.ItemBurguer>(){
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BurguerAdapters.ItemBurguer {
 
@@ -21,6 +27,7 @@ class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerCha
         return ItemBurguer(itemHolder)
     }
 
+
     override fun onBindViewHolder(holder: ItemBurguer, position: Int) {
        var charBurguer: BurguerChar = arrayList.get(position)
 
@@ -28,8 +35,6 @@ class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerCha
         holder.subName.text = charBurguer.subName
         holder.name.text = charBurguer.name
         holder.price.text = charBurguer.price.toString()
-
-
         holder.name.setOnClickListener {
             Toast.makeText(context, charBurguer.name, Toast.LENGTH_LONG).show()
         }

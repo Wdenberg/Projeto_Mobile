@@ -1,5 +1,6 @@
 package com.example.burguerdelivery
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.myRecyleView.setOnClickListener {
+            val detalhesItem = Intent(this, DetalhamentoProduto::class.java )
+            startActivity(detalhesItem)
+        }
+
         imageList.add(SlideModel(R.drawable.banner))
         imageList.add(SlideModel(R.drawable.banner2))
 
@@ -48,8 +54,6 @@ class MainActivity : AppCompatActivity() {
         charItem = setDataList() as ArrayList<BurguerChar>
         burguerAdapters = BurguerAdapters(this, charItem)
         recyclerView?.adapter = burguerAdapters
-
-
 
 
 
@@ -76,6 +80,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
     private fun  setDataList(name: String = ""): List<BurguerChar> {
 
