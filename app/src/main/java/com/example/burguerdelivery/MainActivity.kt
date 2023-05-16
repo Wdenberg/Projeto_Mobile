@@ -19,7 +19,7 @@ import com.example.burguerdelivery.databinding.ActivityMainBinding
 import com.example.burguerdelivery.model.BurguerChar
 import java.util.Objects
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView?.layoutManager = gridLayoutManager
         recyclerView?.setHasFixedSize(true)
         charItem = setDataList() as ArrayList<BurguerChar>
-        burguerAdapters = BurguerAdapters(this, charItem)
+        burguerAdapters = BurguerAdapters(this, charItem, this@MainActivity)
         recyclerView?.adapter = burguerAdapters
 
 
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 charItem = setDataList(s.toString()) as ArrayList<BurguerChar>
-                burguerAdapters = BurguerAdapters(applicationContext, charItem)
+                burguerAdapters = BurguerAdapters(applicationContext, charItem, this@MainActivity)
                 recyclerView?.adapter = burguerAdapters
             }
 
@@ -78,7 +78,6 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-
     }
 
 
@@ -87,27 +86,6 @@ class MainActivity : AppCompatActivity() {
         var itemBurguer: ArrayList<BurguerChar> = ArrayList()
 
         itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burguer", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burguer", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burguer", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burguer", 24.90))
         itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
         itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
         itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
@@ -121,11 +99,16 @@ class MainActivity : AppCompatActivity() {
         return itemBurguer
     }
 
+    override fun onClick(position: Int) {
+        when(position){
+            0 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
+            1 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
+            2 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
+            3 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
+        }
+        
 
-
-
-
-
+    }
 
 
 }

@@ -19,5 +19,15 @@ class DetalhamentoProduto : AppCompatActivity() {
             val voltarTela = Intent(this, MainActivity::class.java )
             startActivity(voltarTela)
         }
+
+
+
+        binding.btnMenos.setOnClickListener {
+
+        }
+
+        binding.btnMais.setOnClickListener {
+
+        }
     }
 }

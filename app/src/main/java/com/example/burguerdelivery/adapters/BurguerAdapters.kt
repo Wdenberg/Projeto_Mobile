@@ -16,7 +16,7 @@ import com.example.burguerdelivery.R
 import com.example.burguerdelivery.databinding.GridLayoutListItemBinding
 import com.example.burguerdelivery.model.BurguerChar
 
-class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerChar>): RecyclerView.Adapter<BurguerAdapters.ItemBurguer>(){
+class BurguerAdapters ( var context: Context, var arrayList: ArrayList<BurguerChar>, val listener: myClick): RecyclerView.Adapter<BurguerAdapters.ItemBurguer>(){
 
 
 
@@ -38,6 +38,8 @@ class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerCha
         holder.name.setOnClickListener {
             Toast.makeText(context, charBurguer.name, Toast.LENGTH_LONG).show()
         }
+
+
     }
 
     override fun getItemCount(): Int {
@@ -45,12 +47,22 @@ class BurguerAdapters (var context: Context, var arrayList: ArrayList<BurguerCha
     }
 
 
-    class ItemBurguer(itemView: View): RecyclerView.ViewHolder(itemView){
+   inner class ItemBurguer(itemView: View): RecyclerView.ViewHolder(itemView){
 
         var image = itemView.findViewById<ImageView>(R.id.icons_img)
         var subName = itemView.findViewById<TextView>(R.id.burguer_subName)
         var name = itemView.findViewById<TextView>(R.id.burguer_Name)
         var price = itemView.findViewById<TextView>(R.id.burguer_Price)
-    }
 
+
+        init {
+            itemView.setOnClickListener {
+                var position = adapterPosition
+                listener.onClick(position)
+            }
+        }
+    }
+    interface myClick{
+        fun onClick(position: Int)
+    }
 }
