@@ -30,16 +30,7 @@ class BurguerAdapters ( var context: Context, var arrayList: ArrayList<BurguerCh
 
     override fun onBindViewHolder(holder: ItemBurguer, position: Int) {
        var charBurguer: BurguerChar = arrayList.get(position)
-
-        holder.image.setImageResource(charBurguer.img!!)
-        holder.subName.text = charBurguer.subName
-        holder.name.text = charBurguer.name
-        holder.price.text = charBurguer.price.toString()
-        holder.name.setOnClickListener {
-            Toast.makeText(context, charBurguer.name, Toast.LENGTH_LONG).show()
-        }
-
-
+        holder.bind(charBurguer, listener)
     }
 
     override fun getItemCount(): Int {
@@ -54,15 +45,24 @@ class BurguerAdapters ( var context: Context, var arrayList: ArrayList<BurguerCh
         var name = itemView.findViewById<TextView>(R.id.burguer_Name)
         var price = itemView.findViewById<TextView>(R.id.burguer_Price)
 
+       fun bind(charBurguer: BurguerChar, listener: myClick){
 
-        init {
-            itemView.setOnClickListener {
-                var position = adapterPosition
-                listener.onClick(position)
-            }
-        }
+           image.setImageResource(charBurguer.img!!)
+           subName.text = charBurguer.subName
+           name.text = charBurguer.name
+           price.text = charBurguer.price.toString()
+           name.setOnClickListener {
+               Toast.makeText(context, charBurguer.name, Toast.LENGTH_LONG).show()
+           }
+           itemView.setOnClickListener {
+               listener.onClick(charBurguer)
+           }
+       }
+
+
     }
     interface myClick{
-        fun onClick(position: Int)
+        fun onClick(charBurguer: BurguerChar)
+
     }
 }

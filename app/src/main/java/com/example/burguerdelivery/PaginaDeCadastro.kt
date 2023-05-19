@@ -18,13 +18,20 @@ class PaginaDeCadastro : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        var btnLogin = findViewById<Button>(binding.btnLoginCadastro.id)
-        val btnCadastrar = findViewById<Button>(binding.btnCadastrar.id)
+
+        binding.btnCadastrar.setOnClickListener {
+
+            var btnLogin = findViewById<Button>(binding.btnLoginCadastro.id)
+            val btnCadastrar = findViewById<Button>(binding.btnCadastrar.id)
 
 
 
 
-        btnLogin.setOnClickListener{
+        }
+
+
+
+        binding.btnLoginCadastro.setOnClickListener{
 
             val irPraLogin = Intent(this, TelaDeLogin::class.java)
             startActivity(irPraLogin)

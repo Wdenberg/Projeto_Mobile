@@ -3,62 +3,61 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="12dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
     android:id="@+id/gridItens"
+    tools:context=".MainActivity"
     >
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:padding="8dp"
         android:background="@drawable/card_color"
         >
 
         <ImageView
             android:id="@+id/icons_img"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/texas_burger"
-            />
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:src="@drawable/texas_burger" />
 
         <TextView
             android:id="@+id/burguer_subName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
             android:layout_below="@+id/icons_img"
-            android:text="Tradicional"
             android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            />
+            android:text="Tradicional"
+            android:textSize="12dp"
+            android:paddingLeft="8dp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/burguer_Name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
             android:layout_below="@id/burguer_subName"
             android:fontFamily="sans-serif-light"
             android:textSize="20dp"
             android:text="Texa Burguer"
             android:textStyle="bold"
+
             />
         <TextView
             android:id="@+id/burguer_Price"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_below="@id/burguer_Name"
             android:text="R$: 24,90"
+            android:paddingLeft="8dp"
             android:fontFamily="sans-serif-light"
             android:textSize="22dp"
             android:textStyle="bold"

@@ -20,14 +20,18 @@
             android:name=".DetalhamentoProduto"
             android:exported="false" />
         <activity
-            android:name=".TelaDeLogin"
+            android:name=".PaginaDeCadastro"
             android:exported="false" />
         <activity
-            android:name=".PaginaDeCadastro"
+            android:name=".TelaDeLogin"
             android:exported="false" />
 
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TelaHome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

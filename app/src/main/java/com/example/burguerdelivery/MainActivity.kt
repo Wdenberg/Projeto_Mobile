@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.burguerdelivery.adapters.BurguerAdapters
+import com.example.burguerdelivery.databinding.ActivityDetalhamentoProdutoBinding
 import com.example.burguerdelivery.databinding.ActivityMainBinding
 import com.example.burguerdelivery.model.BurguerChar
 import java.util.Objects
@@ -40,8 +41,9 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
             startActivity(detalhesItem)
         }
 
-        imageList.add(SlideModel(R.drawable.banner))
-        imageList.add(SlideModel(R.drawable.banner2))
+        imageList.add(SlideModel(R.drawable.banner_promo_01))
+        imageList.add(SlideModel(R.drawable.banner_promo_02))
+        imageList.add(SlideModel(R.drawable.banner_promo_03))
 
         val sliderLayout = findViewById<ImageSlider>(binding.sliderLayout.id)
         sliderLayout.setImageList(imageList)
@@ -85,10 +87,10 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
 
         var itemBurguer: ArrayList<BurguerChar> = ArrayList()
 
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
+        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", "R$: 24,90"))
+        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", "R$: 25,90"))
+        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", "R$: 34.90"))
+        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", "R$: 27,90"))
 
         if(name.isNotEmpty()){
 
@@ -96,19 +98,19 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
                 it.name?.contains(name, true) ?: false
             }
         }
+
+
         return itemBurguer
     }
+    override  fun onClick(char: BurguerChar) {
 
-    override fun onClick(position: Int) {
-        when(position){
-            0 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
-            1 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
-            2 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
-            3 -> startActivity(Intent(this, DetalhamentoProduto::class.java))
-        }
-        
+        val intent = Intent(this, DetalhamentoProduto::class.java)
+        intent.putExtra("burguer", char)
+        startActivity(intent)
 
     }
+
+
 
 
 }

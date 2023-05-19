@@ -18,7 +18,10 @@ class TelaDeLogin : AppCompatActivity() {
         binding = ActivityTelaDeLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.cadastrar.setOnClickListener{
+            val pagCadastro = Intent(this, PaginaDeCadastro::class.java)
+            startActivity(pagCadastro)
+        }
 
         val bntLoginVeri = findViewById<Button>(binding.bntLogin.id)
 
@@ -42,11 +45,6 @@ class TelaDeLogin : AppCompatActivity() {
 
             }
 
-            val bntCadastro = findViewById<Button>(binding.cadastrar.id)
-            bntCadastro.setOnClickListener{
-                val pagCadastro = Intent(this, PaginaDeCadastro::class.java)
-                startActivity(pagCadastro)
-            }
 
 
         }
