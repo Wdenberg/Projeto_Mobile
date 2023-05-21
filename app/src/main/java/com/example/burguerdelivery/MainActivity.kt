@@ -87,10 +87,10 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
 
         var itemBurguer: ArrayList<BurguerChar> = ArrayList()
 
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", "R$: 24,90"))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", "R$: 25,90"))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", "R$: 34.90"))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", "R$: 27,90"))
+        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", 24.90))
+        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
+        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
+        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
 
         if(name.isNotEmpty()){
 

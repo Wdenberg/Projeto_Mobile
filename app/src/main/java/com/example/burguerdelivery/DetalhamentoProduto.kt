@@ -16,6 +16,7 @@ class DetalhamentoProduto : AppCompatActivity() {
     private var contador = 1
     private lateinit var contadorTextView: TextView
     private lateinit var alteraValorTextView: TextView
+    private var price: Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +25,12 @@ class DetalhamentoProduto : AppCompatActivity() {
 
         val dados = intent.extras
         var nameBurguer = dados?.getParcelable<BurguerChar>("burguer")
+        price = nameBurguer?.price ?: 0.0
+
 
         binding.goldenBurg.text = nameBurguer?.name
         binding.imgGolden.findViewById<ImageView>(binding.imgGolden.id)
-        binding.r2550.text = nameBurguer?.price
+        binding.r2550.text = String.format("R$: %.2f", nameBurguer?.price)
 
         binding.btnVoltar.setOnClickListener {
             val voltarTela = Intent(this, MainActivity::class.java)
@@ -54,10 +57,10 @@ class DetalhamentoProduto : AppCompatActivity() {
             }
         }
 
-        }
+    }
     private fun updateContador() {
         contadorTextView.text = contador.toString()
-        val valor = 34.90 * contador
+        val valor = price * contador
         alteraValorTextView.text = String.format("R$: %.2f", valor)
     }
 }
