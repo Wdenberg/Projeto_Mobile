@@ -163,16 +163,14 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="220dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="540dp"
-        android:text="R$ 25,50"
-        android:textSize="36dp"
-        android:textStyle="bold"
-        android:textColor="#FB9400"
+        android:layout_marginEnd="24dp"
         android:gravity="right|top"
-        />
+        android:text="R$ 25,50"
+        android:textColor="#FB9400"
+        android:textSize="36dp"
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Sacola"
