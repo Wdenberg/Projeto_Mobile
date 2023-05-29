@@ -177,16 +177,17 @@
         android:layout_width="380dp"
         android:layout_height="61dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
         android:layout_marginTop="620dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/border_btn_sacola"
         android:text="Adicionar na Sacola "
         android:textAllCaps="false"
-        android:textSize="16dp"
-        android:textColor="@color/white"
-        android:background="@drawable/border_btn_sacola"
 
-        />
+        android:textColor="@color/white"
+        android:textSize="16dp" />
 
 </RelativeLayout>

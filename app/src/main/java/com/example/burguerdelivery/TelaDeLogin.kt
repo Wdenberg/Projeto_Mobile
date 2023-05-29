@@ -8,18 +8,21 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.burguerdelivery.api.UserService
 import com.example.burguerdelivery.databinding.ActivityTelaDeLoginBinding
+import com.example.burguerdelivery.model.Usuario
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 
 class TelaDeLogin : AppCompatActivity() {
 
     private lateinit var binding: ActivityTelaDeLoginBinding
-    private lateinit var mGoogleClient: GoogleSignInClient
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTelaDeLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         binding.cadastrar.setOnClickListener{
             val pagCadastro = Intent(this, PaginaDeCadastro::class.java)
@@ -29,6 +32,7 @@ class TelaDeLogin : AppCompatActivity() {
         val bntLoginVeri = findViewById<Button>(binding.bntLogin.id)
 
         bntLoginVeri.setOnClickListener{
+
 
             val email = binding.inputeLoginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
@@ -47,10 +51,15 @@ class TelaDeLogin : AppCompatActivity() {
                     binding.loginPassword.error = "Senha Invalida"
                 }
             )
+
+
+
         }
 
 
     }
+
+
 
 
 

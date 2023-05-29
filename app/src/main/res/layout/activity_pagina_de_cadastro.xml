@@ -60,27 +60,31 @@
             android:id="@+id/input_email_cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="18dp"
+            android:layout_below="@+id/input_name_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/iputsColor"
             android:hint="@string/digite_seu_e_mail"
             android:inputType="textWebEmailAddress"
             android:padding="18dp"
-            android:textColorHint="@color/iputsNameColor"
-            android:layout_below="@+id/input_name_cadastro"/>
+            android:textColorHint="@color/iputsNameColor" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/input_password_cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="18dp"
+            android:layout_below="@+id/input_email_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/iputsColor"
             android:hint="@string/digite_sua_senha"
             android:inputType=""
             android:padding="18dp"
-            android:textColorHint="@color/iputsNameColor"
-            android:layout_below="@+id/input_email_cadastro"/>
+            android:textColorHint="@color/iputsNameColor" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_cadastrar"

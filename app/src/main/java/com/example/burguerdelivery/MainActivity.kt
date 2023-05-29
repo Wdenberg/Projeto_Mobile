@@ -18,9 +18,12 @@ import com.example.burguerdelivery.adapters.BurguerAdapters
 import com.example.burguerdelivery.databinding.ActivityDetalhamentoProdutoBinding
 import com.example.burguerdelivery.databinding.ActivityMainBinding
 import com.example.burguerdelivery.model.BurguerChar
+import com.example.burguerdelivery.model.Usuario
+import com.google.android.gms.dtdi.core.Extra
 import java.util.Objects
+import java.util.concurrent.TimeoutException
 
-class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
+class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
 
     private lateinit var binding: ActivityMainBinding
 
@@ -30,11 +33,15 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick {
     private var burguerAdapters: BurguerAdapters? = null
     private val imageList = arrayListOf<SlideModel>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnSair.setOnClickListener {
+            val sair = Intent(this, TelaDeLogin::class.java)
+            startActivity(sair)
+        }
 
         binding.myRecyleView.setOnClickListener {
             val detalhesItem = Intent(this, DetalhamentoProduto::class.java )
