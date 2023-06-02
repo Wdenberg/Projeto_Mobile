@@ -1,34 +1,28 @@
 package com.example.burguerdelivery
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Button
-import android.widget.TextSwitcher
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.burguerdelivery.adapters.BurguerAdapters
-import com.example.burguerdelivery.databinding.ActivityDetalhamentoProdutoBinding
+import com.example.burguerdelivery.api.ProdutoService
 import com.example.burguerdelivery.databinding.ActivityMainBinding
 import com.example.burguerdelivery.model.BurguerChar
-import com.example.burguerdelivery.model.Usuario
-import com.google.android.gms.dtdi.core.Extra
-import java.util.Objects
-import java.util.concurrent.TimeoutException
 
 class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
 
     private lateinit var binding: ActivityMainBinding
 
     private var recyclerView: RecyclerView? = null
-    private lateinit var charItem: ArrayList<BurguerChar>
+    private var charItem: ArrayList<BurguerChar> = arrayListOf()
     private var gridLayoutManager: GridLayoutManager? = null
     private var burguerAdapters: BurguerAdapters? = null
     private val imageList = arrayListOf<SlideModel>()
@@ -43,11 +37,6 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
             startActivity(sair)
         }
 
-        binding.myRecyleView.setOnClickListener {
-            val detalhesItem = Intent(this, DetalhamentoProduto::class.java )
-            startActivity(detalhesItem)
-        }
-
         imageList.add(SlideModel(R.drawable.banner_promo_01))
         imageList.add(SlideModel(R.drawable.banner_promo_02))
         imageList.add(SlideModel(R.drawable.banner_promo_03))
@@ -56,29 +45,23 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
         sliderLayout.setImageList(imageList)
 
 
-        recyclerView = findViewById(binding.myRecyleView.id)
+        recyclerView = binding.myRecyleView
         gridLayoutManager = GridLayoutManager(applicationContext, 2, LinearLayoutManager.VERTICAL, false)
         recyclerView?.layoutManager = gridLayoutManager
         recyclerView?.setHasFixedSize(true)
-        charItem = setDataList() as ArrayList<BurguerChar>
-        burguerAdapters = BurguerAdapters(this, charItem, this@MainActivity)
+        burguerAdapters = BurguerAdapters(charItem, this@MainActivity)
         recyclerView?.adapter = burguerAdapters
 
-
-
+        /*
         val pesquisa = findViewById<TextView>(binding.btnpesquisa.id)
-
-
-
         pesquisa.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                charItem = setDataList(s.toString()) as ArrayList<BurguerChar>
-                burguerAdapters = BurguerAdapters(applicationContext, charItem, this@MainActivity)
-                recyclerView?.adapter = burguerAdapters
+
+
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -86,38 +69,44 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
             }
 
         })
+        */
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        setDataList()
+    }
 
-    private fun  setDataList(name: String = ""): List<BurguerChar> {
 
-        var itemBurguer: ArrayList<BurguerChar> = ArrayList()
 
-        itemBurguer.add(BurguerChar(R.drawable.texas_burger, "Tradicional", "Texas Burger", 24.90))
-        itemBurguer.add(BurguerChar(R.drawable.golden_burger, "Tradicional", "Golden Burger", 25.90))
-        itemBurguer.add(BurguerChar(R.drawable.monster_burger, "Tradicional", "Monster Burger", 34.90))
-        itemBurguer.add(BurguerChar(R.drawable.old_burger, "Tradicional", "Old Burger", 27.90))
+    private fun  setDataList() {
+       // val searchTerm = binding.btnpesquisa.text.toString()
 
-        if(name.isNotEmpty()){
-
-        return itemBurguer.filter {
-                it.name?.contains(name, true) ?: false
+        ProdutoService.produtos(
+           // nome = searchTerm,
+            onSuccess = {
+                (it as? ArrayList)?.let {
+                    val starPosition = charItem.size
+                    charItem.addAll(it)
+                    burguerAdapters?.notifyItemRangeChanged(starPosition, charItem.size)
+                } ?: run {
+                    Toast.makeText(this, "erro na resposta", Toast.LENGTH_LONG).show()
+                }
+            },
+            onFailure = {
+                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
             }
-        }
 
 
-        return itemBurguer
+        )
     }
-    override  fun onClick(char: BurguerChar) {
 
+    override  fun onClick(char: BurguerChar) {
         val intent = Intent(this, DetalhamentoProduto::class.java)
         intent.putExtra("burguer", char)
         startActivity(intent)
-
     }
-
-
 
 
 }

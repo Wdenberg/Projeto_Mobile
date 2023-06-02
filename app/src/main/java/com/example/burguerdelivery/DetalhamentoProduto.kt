@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.example.burguerdelivery.databinding.ActivityDetalhamentoProdutoBinding
 import com.example.burguerdelivery.model.BurguerChar
+import com.squareup.picasso.Picasso
 
 class DetalhamentoProduto : AppCompatActivity() {
 
@@ -23,18 +26,44 @@ class DetalhamentoProduto : AppCompatActivity() {
         binding = ActivityDetalhamentoProdutoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
         val dados = intent.extras
         var nameBurguer = dados?.getParcelable<BurguerChar>("burguer")
-        price = nameBurguer?.price ?: 0.0
+
+        */
+
+        val intent = intent
+        val burguerChar = intent.getParcelableExtra<BurguerChar>("burguer")
+
+        price = burguerChar?.preco ?: 0.0
+        binding.goldenBurg.text = burguerChar?.nome
+        binding.r2550.text = String.format("R$: %.2f", burguerChar?.preco)
+        binding.blendsDeC.text = burguerChar?.descricao
+        val imgUrl = "http://192.168.1.13/img/${burguerChar?.img}"
+
+        Picasso.get()
+            .load(imgUrl)
+            .into(binding.imgGolden)
 
 
-        binding.goldenBurg.text = nameBurguer?.name
-        binding.imgGolden.findViewById<ImageView>(binding.imgGolden.id)
-        binding.r2550.text = String.format("R$: %.2f", nameBurguer?.price)
+
+
+
+
+
+
+
 
         binding.btnVoltar.setOnClickListener {
             val voltarTela = Intent(this, MainActivity::class.java)
             startActivity(voltarTela)
+        }
+
+        binding.btnSacola.setOnClickListener {
+            val voltarTelaPrincipal = Intent(this, MainActivity::class.java)
+            startActivity(voltarTelaPrincipal)
+
+            Toast.makeText(this, "Produto Adicionado", Toast.LENGTH_LONG).show()
         }
 
         contadorTextView = findViewById(binding.contador.id)

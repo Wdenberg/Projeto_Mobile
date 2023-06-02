@@ -5,8 +5,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class BurguerChar(
-    var img: Int? = 0,
+    var id: Long = 0,
+    var img: String? = null,
     var subName: String? = null,
-    var name:String? = null,
-    var price: Double? = 0.0
+    var descricao: String? = null,
+    var nome:String? = null,
+    var preco: Double? = 0.0
 ): Parcelable
