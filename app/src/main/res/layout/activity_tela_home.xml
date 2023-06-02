@@ -16,7 +16,7 @@
             android:id="@+id/img_Burg_Home"
             android:layout_width="match_parent"
             android:layout_height="450dp"
-            android:src="@drawable/homer_b" />
+            android:src="@drawable/burger" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/Text_Homer"

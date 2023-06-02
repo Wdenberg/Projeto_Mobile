@@ -38,7 +38,7 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/baseline_arrow_back_24" />
 
-    <View
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_golden_"
         android:layout_width="match_parent"
         android:layout_height="240dp"
@@ -48,7 +48,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
-        android:background="@drawable/img___golden_burger" />
+        android:src="@drawable/img___golden_burger" />
 
     <TextView
         android:id="@+id/tradicional"
@@ -169,7 +169,7 @@
         android:gravity="right|top"
         android:text="R$ 25,50"
         android:textColor="#FB9400"
-        android:textSize="36dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -184,7 +184,7 @@
         android:layout_marginTop="620dp"
         android:layout_marginEnd="18dp"
         android:background="@drawable/border_btn_sacola"
-        android:text="Adicionar na Sacola "
+        android:text="COMFIRMA"
         android:textAllCaps="false"
 
         android:textColor="@color/white"

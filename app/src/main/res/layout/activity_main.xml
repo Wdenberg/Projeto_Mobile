@@ -71,7 +71,6 @@
         app:iss_corner_radius="5"
         app:iss_delay="3000"
         app:iss_period="1000"
-        android:background="@drawable/card_color"
         app:iss_error_image="@android:color/darker_gray"
         app:iss_placeholder="@android:color/darker_gray"
         tools:layout_editor_absoluteX="16dp"
