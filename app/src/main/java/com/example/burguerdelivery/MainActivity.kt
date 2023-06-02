@@ -2,9 +2,7 @@ package com.example.burguerdelivery
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.TextView
+
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -52,25 +50,6 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
         burguerAdapters = BurguerAdapters(charItem, this@MainActivity)
         recyclerView?.adapter = burguerAdapters
 
-        /*
-        val pesquisa = findViewById<TextView>(binding.btnpesquisa.id)
-        pesquisa.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-
-            }
-
-        })
-        */
-
     }
 
     override fun onResume() {
@@ -81,10 +60,10 @@ class MainActivity : AppCompatActivity(), BurguerAdapters.myClick{
 
 
     private fun  setDataList() {
-       // val searchTerm = binding.btnpesquisa.text.toString()
+
 
         ProdutoService.produtos(
-           // nome = searchTerm,
+
             onSuccess = {
                 (it as? ArrayList)?.let {
                     val starPosition = charItem.size

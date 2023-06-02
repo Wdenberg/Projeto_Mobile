@@ -26,11 +26,6 @@ class DetalhamentoProduto : AppCompatActivity() {
         binding = ActivityDetalhamentoProdutoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*
-        val dados = intent.extras
-        var nameBurguer = dados?.getParcelable<BurguerChar>("burguer")
-
-        */
 
         val intent = intent
         val burguerChar = intent.getParcelableExtra<BurguerChar>("burguer")
@@ -44,13 +39,6 @@ class DetalhamentoProduto : AppCompatActivity() {
         Picasso.get()
             .load(imgUrl)
             .into(binding.imgGolden)
-
-
-
-
-
-
-
 
 
 
